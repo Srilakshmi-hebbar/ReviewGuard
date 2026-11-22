@@ -1,0 +1,92 @@
+{
+  "features": [
+    "rating",
+    "restaurantRating",
+    "ReviewLength",
+    "friendCount",
+    "reviewCount",
+    "firstCount",
+    "usefulCount",
+    "coolCount",
+    "funnyCount",
+    "complimentCount",
+    "tipCount",
+    "fanCount",
+    "account_age_days",
+    "reviewed_within_30d",
+    "is_extreme_rating",
+    "rating_gap",
+    "friends_per_review",
+    "useful_per_review",
+    "compliments_per_review",
+    "no_social_ties"
+  ],
+  "excluded_on_purpose": [
+    "reviewUsefulCount",
+    "IDs",
+    "name",
+    "location",
+    "raw dates",
+    "reviewContent"
+  ],
+  "label_note": "flagged=1 is PROVISIONALLY treated as suspicious. This is inferred from behaviour, not confirmed by dataset documentation. Labels are proxies.",
+  "sklearn_version": "1.9.1",
+  "train_rows": 9929,
+  "test_rows": 2483,
+  "metrics": {
+    "Logistic Regression": {
+      "accuracy": 0.8679017317760773,
+      "precision_class1": 0.853183520599251,
+      "recall_class1": 0.8961447678992919,
+      "macro_f1": 0.8675767784903157,
+      "unseen_reviewers_macro_f1": 0.8490712169532837,
+      "confusion_matrix": [
+        [
+          1016,
+          196
+        ],
+        [
+          132,
+          1139
+        ]
+      ],
+      "group_cv_macro_f1": 0.8624190126075273
+    },
+    "Linear SVM": {
+      "accuracy": 0.8683044703987113,
+      "precision_class1": 0.8511904761904762,
+      "recall_class1": 0.9000786782061369,
+      "macro_f1": 0.867931224904906,
+      "unseen_reviewers_macro_f1": 0.8481982779330139,
+      "confusion_matrix": [
+        [
+          1012,
+          200
+        ],
+        [
+          127,
+          1144
+        ]
+      ],
+      "group_cv_macro_f1": 0.8629880648114023
+    },
+    "Random Forest": {
+      "accuracy": 0.8731373338703181,
+      "precision_class1": 0.8621212121212121,
+      "recall_class1": 0.8953579858379229,
+      "macro_f1": 0.872896869731256,
+      "unseen_reviewers_macro_f1": 0.842312616898882,
+      "confusion_matrix": [
+        [
+          1030,
+          182
+        ],
+        [
+          133,
+          1138
+        ]
+      ],
+      "group_cv_macro_f1": 0.8586406260782493
+    }
+  }
+}

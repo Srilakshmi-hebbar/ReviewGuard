@@ -1,0 +1,14 @@
+# Virtual environment and Python caches
+venv/
+__pycache__/
+*.pyc
+
+# Dataset (licensing unclear; see README)
+data/
+
+# Local backups and scratch files
+app/*_backup.py
+*.bak
+
+# Text outputs from our debug runs
+reports/*.txt
